@@ -1,4 +1,6 @@
+// jest.config.js
 module.exports = {
-  testEnvironment: "node"
+  testEnvironment: "node",
+  transform: {}, // disable Babel since we use plain JS
 };
 

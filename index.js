@@ -9,9 +9,12 @@ const server = http.createServer((req, res) => {
   res.end("Hello, DevOps World!\n");
 });
 
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Only listen if running directly (`node index.js`)
+if (require.main === module) {
+  server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 
-module.exports = server; // for testing
+module.exports = server;
 
